@@ -34,9 +34,9 @@ def do_hashing(original_str:str, hash_method:HashingMethod='SHA256', ret_type:Re
     """
     m = None
     if hash_method=='SHA256':
-        m = hashlib.sha256()
+        m = hashlib.sha256(original_str.encode())
     elif hash_method=='SHA3_512':
-        m = hashlib.sha3_512()
+        m = hashlib.sha3_512(original_str.encode())
     
     ret_str = m.hexdigest()
     if ret_type=='Bin':
