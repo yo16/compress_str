@@ -17,8 +17,6 @@ def do_compress(str_hex:str)->str:
     Returns:
         str: zip圧縮したバイナリ値を16進数にした文字列
     """
-    ret = ''
-    
     # 16進数文字列をそのままバイナリ化
     b = bytes.fromhex(str_hex)
     
@@ -35,12 +33,12 @@ def do_compress(str_hex:str)->str:
 
 
 if __name__=='__main__':
-    test_str = 'test123'
-    #ret = do_hashing(test_str, ret_type='Hex', hash_method='SHA256')
-    ret = do_hashing(test_str, ret_type='Hex', hash_method='SHA3_512')
-    print(ret)
-    print(f'{len(ret)/2} bytes')        # 16進数1文字=4bit=0.5byte
-    
-    ret2 = do_compress(ret)
-    print(ret2)
-    print(f'{len(ret2)/2} bytes')
+test_str = 'test123'
+#ret = do_hashing(test_str, ret_type='Hex', hash_method='SHA256')
+ret = do_hashing(test_str, ret_type='Hex', hash_method='SHA3_512')
+print(ret)
+print(f'{len(ret)/2} bytes')        # 16進数1文字=4bit=0.5byte
+
+ret2 = do_compress(ret)
+print(ret2)
+print(f'{len(ret2)/2} bytes')
