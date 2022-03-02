@@ -33,12 +33,12 @@ def do_compress(str_hex:str)->str:
 
 
 if __name__=='__main__':
-test_str = 'test123'
-#ret = do_hashing(test_str, ret_type='Hex', hash_method='SHA256')
-ret = do_hashing(test_str, ret_type='Hex', hash_method='SHA3_512')
-print(ret)
-print(f'{len(ret)/2} bytes')        # 16進数1文字=4bit=0.5byte
+    test_str = 'test123'
+    #ret = do_hashing(test_str, ret_type='Hex', hash_method='SHA256')
+    ret = do_hashing(test_str, ret_type='Hex', hash_method='SHA3_512')
+    print(ret)
+    print(f'{len(ret)/2} bytes')        # 16進数1文字=4bit=0.5byte
 
-ret2 = do_compress(ret)
-print(ret2)
-print(f'{len(ret2)/2} bytes')
+    ret2 = do_compress(ret)
+    print(ret2)
+    print(f'{len(ret2)/2} bytes')
